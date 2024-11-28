@@ -32,7 +32,9 @@ header {
 }
 
 header .profile img {
-    width: 150px;
+    width: 150px; /* Default size */
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     margin: 0 auto;
     display: block;
@@ -132,6 +134,10 @@ a:hover {
     color: #0077b5;
 }
 
+#courses ul li, #publications ul li {
+    margin-bottom: 10px;
+}
+
 /* Cards for Experience, Education, Publications */
 .card {
     background: #fff;
@@ -209,7 +215,43 @@ footer p {
     font-size: 1em;
 }
 
+#publications a, #courses a {
+    color: #2b4d59;
+    font-weight: bold;
+}
+
+#publications a:hover, #courses a:hover {
+    color: #0077b5;
+}
+
+#courses ul li, #publications ul li {
+    margin-bottom: 15px;
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.5em;
+    }
+
+    header .title {
+        font-size: 1.2em;
+    }
+
+    .buttons a {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+}
