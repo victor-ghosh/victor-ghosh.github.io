@@ -32,9 +32,9 @@ header {
 }
 
 header .profile img {
-    width: 150px; /* Default size */
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Ensures image width does not exceed the body width */
+    max-width: 150px; /* Max width of the image */
+    height: auto; /* Maintains the aspect ratio */
     border-radius: 50%;
     margin: 0 auto;
     display: block;
@@ -252,6 +252,4 @@ footer p {
     }
 
     footer p {
-        font-size: 1em;
-    }
-}
+     
