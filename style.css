@@ -271,29 +271,37 @@ footer p {
 .logo-slider {
     display: flex;
     animation: scroll 20s linear infinite;
-    width: calc(100% * 2); /* Seamless looping */
-    align-items: center; /* Ensures text stays aligned with logos */
+    align-items: center; /* Ensures logos and text stay aligned */
+    justify-content: flex-start; /* Aligns items for smooth scrolling */
 }
 
 .affiliation {
-    display: flex;
-    flex-direction: column; /* Ensures logos and text stack */
-    align-items: center;
-    justify-content: center;
-    margin: 0 20px;
+    display: inline-block; /* Keeps each logo and text pair inline */
     text-align: center;
-    width: 150px; /* Set a consistent width for each item */
+    width: 150px; /* Uniform width for each item */
 }
 
 .affiliation img {
+    display: block;
+    margin: 0 auto 5px; /* Centers logo and adds spacing below it */
     width: 100%;
     height: auto;
-    margin-bottom: 8px; /* Space between image and text */
 }
 
 .affiliation p {
     font-size: 14px;
     color: #555; /* Subtle gray text */
     margin: 0;
-    white-space: nowrap; /* Prevents wrapping */
+    white-space: nowrap; /* Prevents text wrapping */
+    line-height: 1; /* Keeps text at the same vertical position */
+}
+
+/* Keyframes for smooth, infinite scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
