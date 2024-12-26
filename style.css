@@ -255,6 +255,8 @@ footer p {
         font-size: 1em;
     }
 }
+
+/* Affiliations Section */
 #affiliations {
     text-align: center;
     padding: 20px;
@@ -271,27 +273,30 @@ footer p {
     display: flex;
     animation: scroll 20s linear infinite;
     width: calc(100% * 2); /* Seamless looping */
+    align-items: center; /* Ensures text stays aligned with logos */
 }
 
 .affiliation {
-    display: inline-block;
+    display: flex;
+    flex-direction: column; /* Ensures logos and text stack */
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
     text-align: center;
-    width: 150px; /* Set a consistent width */
-    margin: 0 10px;
+    width: 150px; /* Set a consistent width for each item */
 }
 
 .affiliation img {
-    display: block;
-    margin: 0 auto 5px;
     width: 100%;
     height: auto;
+    margin-bottom: 8px; /* Space between image and text */
 }
 
 .affiliation p {
     font-size: 14px;
-    color: #555;
+    color: #555; /* Subtle gray text */
     margin: 0;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents wrapping */
 }
 
 @keyframes scroll {
