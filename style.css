@@ -265,39 +265,34 @@ footer p {
 .affiliations-container {
     overflow: hidden;
     position: relative;
-    width: 100%;
-    white-space: nowrap;
 }
 
 .logo-slider {
     display: flex;
     animation: scroll 20s linear infinite;
-    align-items: center; /* Ensures logos and text stay aligned */
-    justify-content: flex-start; /* Aligns items for smooth scrolling */
+    width: calc(100% * 2); /* Double the width for seamless scrolling */
 }
 
 .affiliation {
-    display: inline-block; /* Keeps each logo and text pair inline */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    width: 150px; /* Uniform width for each item */
+    margin: 0 15px;
 }
 
 .affiliation img {
-    display: block;
-    margin: 0 auto 5px; /* Centers logo and adds spacing below it */
-    width: 100%;
+    width: 150px;
     height: auto;
+    margin-bottom: 10px;
 }
 
 .affiliation p {
     font-size: 14px;
-    color: #555; /* Subtle gray text */
-    margin: 0;
-    white-space: nowrap; /* Prevents text wrapping */
-    line-height: 1; /* Keeps text at the same vertical position */
+    color: #333;
 }
 
-/* Keyframes for smooth, infinite scrolling */
+/* Keyframes for seamless scrolling */
 @keyframes scroll {
     0% {
         transform: translateX(0);
