@@ -263,12 +263,12 @@ footer p {
 
 .affiliations-container {
     overflow: hidden;
-    white-space: nowrap;
     position: relative;
 }
 
 .logo-slider {
     display: flex;
+    width: calc(100% * 2); /* Double the width for seamless looping */
     animation: scroll 20s linear infinite;
 }
 
@@ -278,20 +278,12 @@ footer p {
     margin: 0 10px;
 }
 
-/* Duplicate the content for seamless looping */
-.logo-slider::after {
-    content: '';
-    display: inline-block;
-    flex-shrink: 0;
-    width: 0; /* Adds a gap at the end of the slider */
-}
-
-/* Keyframes for smooth infinite scroll */
+/* Keyframes for seamless scrolling */
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
