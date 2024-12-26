@@ -256,7 +256,6 @@ footer p {
     }
 }
 
-/* Affiliations Section */
 #affiliations {
     text-align: center;
     padding: 20px;
@@ -265,34 +264,37 @@ footer p {
 .affiliations-container {
     overflow: hidden;
     position: relative;
+    width: 100%;
+    white-space: nowrap;
 }
 
 .logo-slider {
     display: flex;
     animation: scroll 20s linear infinite;
-    width: calc(100% * 2); /* Double the width for seamless scrolling */
+    width: calc(100% * 2); /* Seamless looping */
 }
 
 .affiliation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
     text-align: center;
-    margin: 0 15px;
+    width: 150px; /* Set a consistent width */
+    margin: 0 10px;
 }
 
 .affiliation img {
-    width: 150px;
+    display: block;
+    margin: 0 auto 5px;
+    width: 100%;
     height: auto;
-    margin-bottom: 10px;
 }
 
 .affiliation p {
     font-size: 14px;
-    color: #333;
+    color: #555;
+    margin: 0;
+    white-space: nowrap;
 }
 
-/* Keyframes for seamless scrolling */
 @keyframes scroll {
     0% {
         transform: translateX(0);
