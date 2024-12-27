@@ -276,18 +276,16 @@ footer p {
 }
 
 .affiliation {
-    display: inline-block; /* Keeps logos and text in a row */
-    text-align: center;
-    margin: 0 30px; /* Adds horizontal spacing between logos */
-    width: 150px; /* Consistent container width */
+    margin: 0 20px; /* Horizontal spacing between logo containers */
+    text-align: center; /* Centers text below each logo */
 }
 
 .affiliation img {
-    height: 100px; /* Set a uniform height for all logos */
-    width: auto; /* Adjust width proportionally to maintain aspect ratio */
-    display: block;
-    margin: 0 auto 10px; /* Center align and add space below the logo */
-    object-fit: contain; /* Ensures the logo fits within the container without cropping */
+    height: 100px; /* Uniform height for all logos */
+    width: auto; /* Maintain original aspect ratio */
+    display: block; /* Center logos as block elements */
+    margin: 0 auto 10px; /* Center and add spacing below logos */
+    object-fit: contain; /* Ensure logos fit without distortion */
 }
 
 .affiliation p {
