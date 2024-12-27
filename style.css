@@ -287,6 +287,7 @@ footer p {
     width: auto; /* Adjust width proportionally to maintain aspect ratio */
     display: block;
     margin: 0 auto 10px; /* Center align and add space below the logo */
+    object-fit: contain; /* Ensures the logo fits within the container without cropping */
 }
 
 .affiliation p {
